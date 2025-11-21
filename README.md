@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# 📚 SGEI — Sistema de Gestión Escolar Integral
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido al repositorio del Sistema de Gestión Escolar Integral (SGEI). Este proyecto tiene como objetivo proporcionar una plataforma robusta para la administración escolar, coordinando procesos académicos, personal, estudiantes y reportes.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Características principales
 
-### `npm start`
+- **Gestión Académica:** Administración de cursos, asignaturas, horarios optimizados y evaluaciones/calificaciones.
+- **Gestión de Estudiantes:** Registro, actualización de datos, seguimiento académico, comunicación y reportes.
+- **Gestión de Personal:** Registro de docentes y administrativos, asignaciones y evaluación de desempeño.
+- **Seguridad y Acceso:** Roles con control de acceso (admin, docente, estudiante, padre).
+- **Accesibilidad:** Interfaz optimizada para web y dispositivos móviles.
+- **Reportes y Análisis:** Generación de reportes personalizados y modulares.
+- **Base de Datos:** Diseño estructural para soportar todos los módulos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🗓️ Línea de Tiempo del Proyecto
 
-### `npm test`
+Consulta el archivo [`timeline.md`](./timeline.md) para visualizar la planificación Gantt y el tablero Kanban simulado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏗️ Módulos y Issues del Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Issue                                            | Descripción                                                |
+|--------------------------------------------------|------------------------------------------------------------|
+| [#4](https://github.com/CEPE1724/my-app/issues/4)  | Gestión de Estudiantes: Registro y actualización de datos  |
+| [#8](https://github.com/CEPE1724/my-app/issues/8)  | Gestión de Personal: Evaluación de desempeño               |
+| [Todos los issues](https://github.com/CEPE1724/my-app/issues) | Explora el backlog completo                                |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤝 Colaboradores simulados
 
-### `npm run eject`
+- Nelson — Product Owner
+- Edison — ScrumMaster
+- Steven, adrian, alejadro — Developers
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📋 Board Kanban Simulado
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El tablero Kanban incluye tareas por estado (To Do, In Progress, Done) en el archivo [`timeline.md`](./timeline.md).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📦 Instalación y uso
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clona este repositorio  
+   ```bash
+   git clone https://github.com/CEPE1724/my-app.git
+   ```
+2. Instala las dependencias  
+   ```bash
+   npm install
+   ```
+3. Ejecuta el proyecto  
+   ```bash
+   npm start
+   ```
+4. Accede vía navegador [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚙️ Tecnologías
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Node.js, Express.js
+- React.js o Vue.js (según frontend)
+- MongoDB, PostgreSQL (según base de datos)
+- Docker (opcional)
+- Github Actions para CI/CD
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📖 Documentación
 
-### Making a Progressive Web App
+Consulta la wiki del repositorio para más detalles y buenas prácticas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📢 Reporta un problema
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Si encuentras errores o tienes sugerencias, añade un issue en el [board de issues](https://github.com/CEPE1724/my-app/issues).
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🏆 Licencia
 
-### `npm run build` fails to minify
+Este repositorio está bajo licencia MIT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+Copilot is powered by AI, so mistakes are possible. Leave a comment via el 👍 👎 para mejorar la experiencia.
