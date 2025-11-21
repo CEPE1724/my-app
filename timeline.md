@@ -41,5 +41,4 @@ gantt
 
 ---
 
-Puedes editar este timeline según cambien las fechas, duraciones y dependencias.
-Copilot is powered by AI, so mistakes are possible. Leave a comment via 👍 👎 para mejorar la experiencia.
+
