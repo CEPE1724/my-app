@@ -18,7 +18,7 @@ Bienvenido al repositorio del Sistema de Gestión Escolar Integral (SGEI). Este 
 
 ## 🗓️ Línea de Tiempo del Proyecto
 
-Consulta el archivo [`timeline.md`](./timeline.md) para visualizar la planificación Gantt y el tablero Kanban simulado.
+Consulta el archivo [`timeline.md`](./timeline.md) para visualizar la planificación.
 
 ---
 
@@ -103,6 +103,4 @@ Si encuentras errores o tienes sugerencias, añade un issue en el [board de issu
 
 Este repositorio está bajo licencia MIT.
 
----
 
-Copilot is powered by AI, so mistakes are possible. Leave a comment via el 👍 👎 para mejorar la experiencia.
