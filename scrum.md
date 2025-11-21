@@ -22,11 +22,7 @@ El equipo está compuesto por roles claves:
 - Se gestiona de forma dinámica, priorizando junto al Product Owner en función del valor para el usuario.
 - El backlog se mantiene en [Issues de GitHub](https://github.com/CEPE1724/my-app/issues) y se apoya de herramientas externas (ODDO, HubSpot, Canva, Miro) para seguimiento visual, refinamiento y planificación estratégica.
 
-**Ejemplo visual de backlog:**
-- Canva/Miro: Diagramar dependencias y releases.
-- ODOO/HubSpot: Integración CRM y automatización de tareas.
 
----
 
 ## 3️⃣ Planificación de Sprints
 
