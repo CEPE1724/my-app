@@ -12,7 +12,7 @@ El equipo está compuesto por roles claves:
 |------------------|------------------|--------------------------------------------------------------------------|
 | **Product Owner**| Nelson           | Define requisitos, visión del producto, prioridades y valor entregado    |
 | **ScrumMaster**  | Edison           | Facilita ceremonias, elimina bloqueos, asegura cumplimiento Scrum        |
-| **Developers**   | Steven, adrian, alejadro | Diseño, desarrollo, pruebas y documentación técnica               |
+| **Developers**   | Steven, Adrian, Alejandro | Diseño, desarrollo, pruebas y documentación técnica               |
 
 ---
 
