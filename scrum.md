@@ -1,82 +1,92 @@
-# 🚀 Metodología SCRUM en SGEI
+# 🏆 Aplicación de Metodología SCRUM — SGEI
 
-Este documento describe la aplicación de la metodología Scrum dentro del proyecto Sistema de Gestión Escolar Integral (SGEI), con ejemplos prácticos y recursos para nuevos colaboradores.
-
----
-
-## 1️⃣ Formar el Equipo Scrum
-
-| Rol               | Usuario       | Responsabilidades                                       |
-|-------------------|--------------|---------------------------------------------------------|
-| Product Owner     | Nelson       | Define requisitos, prioriza backlog, asegura valor      |
-| ScrumMaster       | Edison       | Facilita ceremonias, elimina bloqueos, da seguimiento   |
-| Developers        | Steven, adrian, alejadro | Implementan tareas técnicas y funcionales          |
+Este documento describe la implementación profesional de la metodología Scrum en el proyecto **Sistema de Gestión Escolar Integral (SGEI)**, asegurando calidad, colaboración y entrega continua.
 
 ---
 
-## 2️⃣ Crear el Product Backlog
+## 1️⃣ Formación del Equipo SCRUM
 
-El Product Backlog está compuesto por todos los issues activos del proyecto. Puedes visualizarlo en:
-- [Product Backlog SGEI](https://github.com/CEPE1724/my-app/issues)
+El equipo está compuesto por roles claves:
 
-**Herramientas sugeridas**:  
-- ODOO, HubSpot, Canva, Miro  
-- Digitaliza las tareas en el repositorio y visualízalas en boards como Trello, Github Projects, Miro o Canva para mejor seguimiento visual.
-
-Ejemplo de tarea en Canva:
-- Crear en Miro o Canva la línea de tiempo de backlog por módulo y asignar responsables.
+| Rol              | Usuario(s)       | Responsabilidades                                                        |
+|------------------|------------------|--------------------------------------------------------------------------|
+| **Product Owner**| Nelson           | Define requisitos, visión del producto, prioridades y valor entregado    |
+| **ScrumMaster**  | Edison           | Facilita ceremonias, elimina bloqueos, asegura cumplimiento Scrum        |
+| **Developers**   | Steven, adrian, alejadro | Diseño, desarrollo, pruebas y documentación técnica               |
 
 ---
 
-## 3️⃣ Planificar el Sprint
+## 2️⃣ Product Backlog Profesional
 
-La planificación de Sprint consiste en:
-- Seleccionar tareas prioritarias del Product Backlog.
-- Asignar tareas a cada miembro según especialidad.
-- Definir entregables y objetivos del Sprint (por ejemplo, duración de 1 a 2 semanas).
+- El Product Backlog centraliza todas las tareas y requerimientos.
+- Se gestiona de forma dinámica, priorizando junto al Product Owner en función del valor para el usuario.
+- El backlog se mantiene en [Issues de GitHub](https://github.com/CEPE1724/my-app/issues) y se apoya de herramientas externas (ODDO, HubSpot, Canva, Miro) para seguimiento visual, refinamiento y planificación estratégica.
 
-| Sprint | Objetivo                                    | Tareas Seleccionadas                  | Due date     |
-|--------|---------------------------------------------|---------------------------------------|--------------|
-| 1      | Registro de estudiantes y base de datos     | #2, #4                               | 2025-11-28   |
-| 2      | Gestión personal y académica                | #5, #7                               | 2025-12-10   |
-| 3      | Seguridad y reportes                        | #8, #10, #1                          | 2025-12-19   |
+**Ejemplo visual de backlog:**
+- Canva/Miro: Diagramar dependencias y releases.
+- ODOO/HubSpot: Integración CRM y automatización de tareas.
 
 ---
 
-## 4️⃣ Simular los Daily Scrum
+## 3️⃣ Planificación de Sprints
 
-Ejemplo de Daily Scrum:
-- Steven: “Ayer avancé con el formulario de estudiantes, hoy implementaré validaciones. No tengo bloqueos.”
-- adrian: “Integrando interfaz móvil de cursos. Bloqueado por falta de base de datos, pero lo soluciono con Edison.”
-- Edison (ScrumMaster): “Recordar revisar bugs y subir acta del Daily a la wiki.”
-- Nelson: “Validé criterios de evaluación; hoy reviso tareas completadas del Sprint.”
+- Sprints definidos cada 1-2 semanas.
+- En cada planificación se seleccionan tareas del backlog, se dimensionan (estimaciones), asignan responsables y se definen objetivos claros.
+- Uso de boards (Github Projects, Trello, Miro) para visualización de progreso y bloqueos.
 
-Para llevar registro, puedes crear una sección en la wiki o abrir un issue/diario donde colocar comentarios tipo Daily Scrum.
+**Tabla ejemplo:**
 
----
-
-## 5️⃣ Sprint Retrospective
-
-Ejemplo de Sprint Retrospective:
-- ¿Qué funcionó bien?  
-  “Comunicación fluida, entrega a tiempo de tareas clave.”
-- ¿Qué podría mejorarse?  
-  “Falta de claridad en dependencias de validación.”
-- Acciones para el siguiente Sprint:  
-  “Definir mejor criterios antes de iniciar nuevas tareas y usar plantillas para bugs.”
-
-Puedes documentar las retrospectivas en una sección especial del README, en un archivo Retrospective.md, o en un issue de la wiki.
+| Sprint | Objetivo                                    | Issues                                    | Fecha entrega  |
+|--------|---------------------------------------------|-------------------------------------------|---------------|
+| 1      | Registro de estudiantes y base de datos     | #2, #4                                    | 2025-11-28    |
+| 2      | Gestión personal y académica                | #5, #7, #8                                | 2025-12-10    |
+| 3      | Roles, reportes y cierre                    | #10, #1                                   | 2025-12-19    |
 
 ---
 
-## 🛠️ Recursos y Herramientas
+## 4️⃣ Daily Scrum Simulado
 
-- [Miro](https://miro.com/) para diseño colaborativo visual de Sprints y flujo.
-- [Canva](https://canva.com/) para cronogramas y tareas visuales.
-- [ODDO](https://odoo.com/) y [HubSpot](https://hubspot.com/) para gestión empresarial y CRM (opcional).
-- [Github Projects](https://github.com/CEPE1724/my-app/projects) o Trello para seguimiento ágil.
+- Reuniones diarias (15 min) para sincronización rápida, identificación de bloqueos y revisión del avance.
+- Registro en la Wiki o comentarios en issues designados. Ejemplo:
+
+> **Steven (Dev)**: “Avancé con el formulario de estudiantes; hoy trabajo en validaciones. Sin bloqueos.”
+> **adrian (Dev)**: “Ajustando interfaz móvil. Edison revisa los cambios hoy.”
+> **Edison (ScrumMaster)**: “Revisen el acta del Daily en la wiki y suban los bloqueos detectados.”
+> **Nelson (Product Owner)**: “Listos los criterios de evaluación, paso a revisión de tareas cerradas.”
 
 ---
 
-Personaliza las fechas, tareas y roles según evolucionen los Sprints y el equipo.  
-Puedes copiar y adaptar este archivo (`SCRUM.md`) o integrarlo como sección en tu `README.md`.
+## 5️⃣ Sprint Retrospective Formal
+
+- Al cierre del sprint, reunión para analizar:
+  - ¿Qué funcionó bien?
+  - ¿Qué obstáculos o áreas de mejora hubo?
+  - ¿Qué acciones concretas se implementarán en el siguiente Sprint?
+- Documento de retrospectiva archivado en la Wiki o archivo `Retrospective.md`.
+
+**Ejemplo**
+> ✔️ Lo bueno: Entregas puntuales, comunicación abierta.
+> ❌ A mejorar: Documentar bloqueos en board de forma clara.
+> 🎯 Acción: Implementar plantillas para capturar bugs y dependencias.
+
+---
+
+## 🎯 Herramientas Profesionales Integradas
+
+- **Gestión:** ODOO, HubSpot, Github Projects, Trello
+- **Visualización y Flujos:** Miro, Canva
+- **Comunicación y Registro:** Issues, Wiki, Boards
+
+---
+
+## 📣 Buenas prácticas
+
+- Mantener el backlog actualizado y priorizado.
+- Documentar todas las decisiones técnicas y funcionales en la wiki.
+- Realizar las ceremonias (Sprint Planning, Daily, Sprint Review, Retrospective) puntualmente.
+- Usar herramientas de seguimiento visual para mayor transparencia.
+
+---
+
+> Adapta este documento según evolucione tu equipo, tus herramientas y tu producto.  
+> Para más detalles, consulta la wiki o los enlaces internos del repositorio.
