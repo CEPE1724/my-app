@@ -1,33 +1,45 @@
-# 🗓️ Línea de Tiempo del Proyecto SGEI
+# 🗓️ Línea de Tiempo — Timeline de Todos los Issues SGEI
 
 ```mermaid
 gantt
-    title Línea de Tiempo SGEI
+    title Línea de Tiempo SGEI — Todos los Issues
     dateFormat  YYYY-MM-DD
+
     section Base de Datos
-    Diseño estructural      :a1, 2025-11-21, 5d
-    Pruebas iniciales       :a2, after a1, 2d
+    Diseño estructural (#2)                :a1, 2025-11-21, 5d
+
     section Gestión de Estudiantes
-    Registro y actualización de datos    :b1, after a2, 7d
-    Seguimiento académico y comunicación :b2, after b1, 5d
+    Registro y actualización de datos (#4)  :a2, after a1, 7d
+
     section Gestión de Personal
-    Registro y asignaciones  :c1, after b2, 7d
-    Evaluación de desempeño  :c2, after c1, 3d
+    Registro y asignaciones (#5)            :a3, after a2, 4d
+    Evaluación de desempeño (#8)            :a4, after a3, 4d
+
     section Gestión Académica
-    Administración y horarios de cursos  :d1, after c2, 6d
-    Evaluaciones y calificaciones        :d2, after d1, 4d
+    Administración y horarios de cursos (#7)  :b1, after a4, 5d
+
     section Seguridad y Acceso
-    Roles y autenticación    :e1, after d2, 3d
-    section Accesibilidad
-    Web y móvil              :f1, after e1, 4d
+    Roles y autenticación (#10)             :c1, after b1, 3d
+
     section Reportes y Análisis
-    Generación personalizada :g1, after f1, 4d
+    Generación personalizada (#1)           :d1, after c1, 3d
 ```
 
-Simulación Estado Board (Kanban):
+---
 
-| Estado      | Tareas                                                           |
-|-------------|------------------------------------------------------------------|
-| To Do       | Diseño estructural, Seguimiento académico y comunicación, Registro y asignaciones, Administración y horarios de cursos, Web y móvil, Generación personalizada de reportes |
-| In Progress | Registro y actualización de datos, Pruebas iniciales, Evaluación de desempeño, Evaluaciones y calificaciones |
-| Done        | Roles y autenticación                                            |
+## Tabla resumen de issues en timeline
+
+| Issue   | Módulo                        | Inicio      | Duración | URL                                                               |
+|---------|-------------------------------|-------------|----------|-------------------------------------------------------------------|
+| #2      | Base de Datos                 | 2025-11-21  | 5 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/2)          |
+| #4      | Gestión Estudiantes           | 2025-11-26  | 7 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/4)          |
+| #5      | Gestión Personal (registro)   | 2025-12-03  | 4 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/5)          |
+| #8      | Evaluación desempeño personal | 2025-12-07  | 4 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/8)          |
+| #7      | Administrar horarios/cursos   | 2025-12-11  | 5 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/7)          |
+| #10     | Roles y autenticación         | 2025-12-16  | 3 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/10)         |
+| #1      | Reportes personalizados       | 2025-12-19  | 3 días   | [Ver issue](https://github.com/CEPE1724/my-app/issues/1)          |
+
+---
+
+Puedes editar este timeline según cambien las fechas, duraciones y dependencias.
+Copilot is powered by AI, so mistakes are possible. Leave a comment via 👍 👎 para mejorar la experiencia.
