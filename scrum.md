@@ -88,5 +88,4 @@ El equipo está compuesto por roles claves:
 
 ---
 
-> Adapta este documento según evolucione tu equipo, tus herramientas y tu producto.  
-> Para más detalles, consulta la wiki o los enlaces internos del repositorio.
+
