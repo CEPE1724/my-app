@@ -46,6 +46,19 @@ El tablero Kanban incluye tareas por estado (To Do, In Progress, Done) en el arc
 
 ---
 
+## ⚙️ Proceso SCRUM Profesional
+
+Para conocer cómo se estructura el trabajo ágil, consulta el archivo [`SCRUM.md`](./SCRUM.md) que describe:
+
+- Formación del equipo SCRUM y sus roles
+- Creación y gestión del Product Backlog con herramientas (ODDO, HubSpot, Canva, Miro)
+- Planificación de Sprints y entregables
+- Simulación y registro de Daily Scrum
+- Organización de Sprint Retrospectives
+- Mejores prácticas y herramientas integradas
+
+---
+
 ## 📦 Instalación y uso
 
 1. Clona este repositorio  
