@@ -11,20 +11,24 @@
 ```mermaid
 graph TB
     subgraph Modelo["🏪 SISTEMA DE VENTAS"]
-        direction LR
+        direction TB
         
         C["👤 CLIENTE<br/><br/>Persona que<br/>realiza compras"]
         
         V["🛒 VENTA<br/><br/>Transacción<br/>comercial"]
         
+        D["📋 DETALLE_VENTA<br/><br/>Productos en<br/>la venta"]
+        
         P["📦 PRODUCTO<br/><br/>Artículo<br/>a la venta"]
         
         C -->|"realiza<br/>(1:N)"| V
-        V -->|"incluye<br/>(N:M)"| P
+        V -->|"contiene<br/>(1:N)"| D
+        D -->|"de<br/>(N:1)"| P
     end
     
     style C fill:#4fc3f7,stroke:#01579b,stroke-width:4px,color:#000
     style V fill:#fff176,stroke:#f57f17,stroke-width:4px,color:#000
+    style D fill:#a5d6a7,stroke:#1b5e20,stroke-width:4px,color:#000
     style P fill:#ce93d8,stroke:#4a148c,stroke-width:4px,color:#000
 ```
 
@@ -57,7 +61,20 @@ graph TB
 
 ---
 
-### 📦 **PRODUCTO**
+### � **DETALLE_VENTA**
+**Definición:** Entidad asociativa que representa cada producto incluido en una venta específica.
+
+**Atributos:**
+- Cantidad vendida del producto
+- Precio unitario al momento de la venta
+- Descuento aplicado a esta línea
+- Subtotal de la línea (cantidad × precio - descuento)
+
+> **Nota:** Esta entidad resuelve la relación muchos a muchos (N:M) entre VENTA y PRODUCTO.
+
+---
+
+### �📦 **PRODUCTO**
 **Definición:** Artículo o mercancía disponible para ser vendida.
 
 **Atributos:**
@@ -85,21 +102,40 @@ graph TB
 
 ---
 
-### 2️⃣ **VENTA incluye PRODUCTO**
-- **Tipo:** Muchos a Muchos (N:M)
-- **Lectura:** Una venta puede incluir múltiples productos
-- **Lectura inversa:** Un producto puede estar en múltiples ventas
-- **Obligatoriedad:** Una venta debe incluir al menos un producto
-
-**Atributos de la relación:**
-- Cantidad vendida
-- Precio unitario (al momento de la venta)
-- Descuento aplicado
-- Subtotal de la línea
+### 2️⃣ **VENTA contiene DETALLE_VENTA**
+- **Tipo:** Uno a Muchos (1:N)
+- **Lectura:** Una venta puede contener múltiples detalles (líneas de productos)
+- **Lectura inversa:** Cada detalle pertenece a una única venta
+- **Obligatoriedad:** Una venta debe tener al menos un detalle
 
 **Ejemplo:**
-- La venta #001 incluye: 2 laptops, 1 mouse, 1 teclado
-- El producto "Laptop HP" ha sido vendido en 15 ventas diferentes
+- La venta #001 contiene 3 detalles: detalle_1, detalle_2, detalle_3
+- El detalle_1 pertenece a la venta #001
+
+---
+
+### 3️⃣ **DETALLE_VENTA de PRODUCTO**
+- **Tipo:** Muchos a Uno (N:1)
+- **Lectura:** Muchos detalles pueden referenciar al mismo producto
+- **Lectura inversa:** Cada detalle corresponde a un único producto
+- **Obligatoriedad:** Cada detalle debe tener un producto asociado
+
+**Ejemplo:**
+- 15 detalles diferentes referencian al producto "Laptop HP"
+- El detalle_1 corresponde al producto "Laptop HP"
+
+---
+
+### 📊 **Resumen de la Relación N:M Resuelta**
+
+La relación original **VENTA ↔ PRODUCTO** (N:M) se descompone en:
+- **VENTA → DETALLE_VENTA** (1:N)
+- **DETALLE_VENTA → PRODUCTO** (N:1)
+
+**Resultado:**
+- Una venta puede incluir múltiples productos (a través de DETALLE_VENTA)
+- Un producto puede estar en múltiples ventas (a través de DETALLE_VENTA)
+- Los atributos de la relación (cantidad, precio, descuento) se guardan en DETALLE_VENTA
 
 ---
 
@@ -108,7 +144,8 @@ graph TB
 ```mermaid
 erDiagram
     CLIENTE ||--o{ VENTA : "realiza"
-    VENTA }o--o{ PRODUCTO : "incluye"
+    VENTA ||--|{ DETALLE_VENTA : "contiene"
+    PRODUCTO ||--o{ DETALLE_VENTA : "de"
     
     CLIENTE {
         nombre_completo string
@@ -127,6 +164,13 @@ erDiagram
         numero_comprobante string
     }
     
+    DETALLE_VENTA {
+        cantidad integer
+        precio_unitario decimal
+        descuento decimal
+        subtotal decimal
+    }
+    
     PRODUCTO {
         codigo string
         nombre string
@@ -138,7 +182,7 @@ erDiagram
     }
 ```
 
-> **Nota:** La relación N:M entre VENTA y PRODUCTO se implementará mediante una tabla intermedia llamada "DETALLE_VENTA" en el modelo lógico.
+> **Nota:** DETALLE_VENTA es una **entidad asociativa** que transforma la relación N:M entre VENTA y PRODUCTO en dos relaciones 1:N, permitiendo almacenar los atributos propios de cada línea de venta.
 
 ---
 
@@ -192,43 +236,65 @@ flowchart TD
 |----------|--------------|-------------|
 | CLIENTE → VENTA | 1:N | Un cliente puede hacer 0, 1 o muchas ventas |
 | VENTA → CLIENTE | N:1 | Cada venta pertenece exactamente a 1 cliente |
-| VENTA → PRODUCTO | N:M | Una venta incluye 1 o muchos productos |
-| PRODUCTO → VENTA | N:M | Un producto puede estar en 0, 1 o muchas ventas |
+| VENTA → DETALLE_VENTA | 1:N | Una venta contiene 1 o muchos detalles |
+| DETALLE_VENTA → VENTA | N:1 | Cada detalle pertenece a 1 venta |
+| PRODUCTO → DETALLE_VENTA | 1:N | Un producto puede estar en 0, 1 o muchos detalles |
+| DETALLE_VENTA → PRODUCTO | N:1 | Cada detalle corresponde a 1 producto |
+
+**Relación N:M original (conceptual):**
+- VENTA ↔ PRODUCTO: Una venta incluye muchos productos; un producto puede estar en muchas ventas
+- Se resuelve mediante la entidad asociativa DETALLE_VENTA
 
 ---
 
 ## 🎨 Diagrama Conceptual Simplificado
 
 ```
-    ┌─────────────┐
-    │   CLIENTE   │
-    │             │
-    │ • Nombre    │
-    │ • Documento │
-    │ • Contacto  │
-    └──────┬──────┘
+    ┌──────────────┐
+    │   CLIENTE    │
+    │              │
+    │ • Nombre     │
+    │ • Documento  │
+    │ • Contacto   │
+    └──────┬───────┘
            │ realiza
            │ (1:N)
            ▼
-    ┌─────────────┐
-    │    VENTA    │
-    │             │
-    │ • Fecha     │
-    │ • Total     │
-    │ • Estado    │
-    └──────┬──────┘
-           │ incluye
-           │ (N:M)
+    ┌──────────────┐
+    │    VENTA     │
+    │              │
+    │ • Fecha      │
+    │ • Total      │
+    │ • Estado     │
+    └──────┬───────┘
+           │ contiene
+           │ (1:N)
            ▼
-    ┌─────────────┐
-    │  PRODUCTO   │
-    │             │
-    │ • Código    │
-    │ • Nombre    │
-    │ • Precio    │
-    │ • Stock     │
-    └─────────────┘
+    ┌──────────────┐
+    │DETALLE_VENTA │ ◄───── entidad intermedia
+    │              │        (resuelve N:M)
+    │ • Cantidad   │
+    │ • Precio     │
+    │ • Subtotal   │
+    │ • Descuento  │
+    └──────┬───────┘
+           │ de
+           │ (N:1)
+           ▼
+    ┌──────────────┐
+    │  PRODUCTO    │
+    │              │
+    │ • Código     │
+    │ • Nombre     │
+    │ • Precio     │
+    │ • Stock      │
+    └──────────────┘
 ```
+
+**Explicación:**
+- La relación N:M entre VENTA y PRODUCTO se descompone en dos relaciones 1:N
+- DETALLE_VENTA actúa como **entidad asociativa** que conecta ambas entidades
+- Los atributos de la relación (cantidad, precio, descuento) se almacenan en DETALLE_VENTA
 
 ---
 
